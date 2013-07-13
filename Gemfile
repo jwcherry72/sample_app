@@ -15,11 +15,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'turbolinks'
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara'
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg'
 end
