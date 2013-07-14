@@ -2,11 +2,13 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'rails', '4.0.0'
+gem 'pg'
 
 group :development, :test do
-  gem 'sqlite3'
+#  gem 'sqlite3'
   gem 'rspec-rails'
-  gem 'capybara'
+  gem 'guard-rspec'
+#  gem 'capybara'
 end
 
 group :assets do
@@ -18,10 +20,12 @@ end
 gem 'jquery-rails'
 gem 'turbolinks'
 
-#group :test do
-#  gem 'capybara'
-#end
-
-group :production do
-  gem 'pg'
+group :test do
+  gem 'capybara'
+  gem 'rb-fsevent', :require => false
+  gem 'growl'
 end
+
+#group :production do
+#  gem 'pg'
+#end
