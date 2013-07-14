@@ -6,6 +6,7 @@ gem 'rails', '4.0.0'
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :assets do
@@ -17,9 +18,9 @@ end
 gem 'jquery-rails'
 gem 'turbolinks'
 
-group :test do
-  gem 'capybara'
-end
+#group :test do
+#  gem 'capybara'
+#end
 
 group :production do
   gem 'pg'
