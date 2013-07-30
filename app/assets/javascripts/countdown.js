@@ -1,6 +1,6 @@
 function updateCountdown() {
   // 140 characters max
-  var left = 140 - jQuery('#micropost_content').val().length;
+  var left = 140 - $('#micropost_content').val().length;
   if(left == 1) {
     var charactersLeft = ' character left.'
   }
@@ -10,11 +10,13 @@ function updateCountdown() {
   else{
     var charactersLeft = ' characters left.'
   }
-  jQuery('.countdown').text(Math.abs(left) + charactersLeft);
+  $('.countdown').text(Math.abs(left) + charactersLeft);
 }
 
-jQuery(document).ready(function($) {
-  updateCountdown();
-  $('#micropost_content').on("change keyup keydown keypress paste drop",
-                             updateCountdown);
-});
+function attachCounter() {
+	updateCountdown();
+	$('#micropost_content').on("change keyup keydown keypress paste drop",
+                            updateCountdown);
+}
+
+$(document).on("ready page:load", attachCounter);
