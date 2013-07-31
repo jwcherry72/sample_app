@@ -26,6 +26,13 @@ describe "Micropost pages" do
         expect { click_button "Post" }.to change(Micropost, :count).by(1)
       end
     end
+    
+#    describe "character countdown" do
+#      it "should show 134 characters left after entering foobar" do
+#        fill_in 'micropost_content', with: "foobar"
+#        page.should have_content('134 characters left')
+#      end
+#    end
   end
   
   describe "micropost destruction" do
